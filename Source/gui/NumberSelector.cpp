@@ -34,6 +34,8 @@ NumberSelector::NumberSelector(bool p_buttons_right, Type p_type) : m_type(p_typ
 	case Type::selector_8x4:
 		m_asset = UIAssets::Indices::screen_up_down_8x4_R;
 		break;
+	default:
+		break;
 	}
 
 	m_display.setInlay(1);

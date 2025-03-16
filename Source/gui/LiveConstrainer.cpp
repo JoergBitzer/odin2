@@ -202,18 +202,7 @@ void LiveConstrainer::unregisterCurrentComponent() {
 }
 
 juce::MouseCursor LiveConstrainer::positionToMouseCursor(juce::Point<float> p_pos) {
-	// if (p_pos.getDistanceFrom(m_bounds_scaled.withPosition(0.0f, 0.0f).toFloat().getTopLeft()) < SNAP_DISTANCE) {
-	// 	return juce::MouseCursor::TopLeftCornerResizeCursor;
-	// } else if (p_pos.getDistanceFrom(m_bounds_scaled.withPosition(0.0f, 0.0f).toFloat().getTopRight()) <
-	//            SNAP_DISTANCE) {
-	// 	return juce::MouseCursor::TopRightCornerResizeCursor;
-	// } else if (p_pos.getDistanceFrom(m_bounds_scaled.withPosition(0.0f, 0.0f).toFloat().getBottomRight()) <
-	//            SNAP_DISTANCE) {
-	// 	return juce::MouseCursor::BottomRightCornerResizeCursor;
-	// } else if (p_pos.getDistanceFrom(m_bounds_scaled.withPosition(0.0f, 0.0f).toFloat().getBottomLeft()) <
-	//            SNAP_DISTANCE) {
-	// 	return juce::MouseCursor::BottomLeftCornerResizeCursor;
-
+	const auto SNAP_DISTANCE = 10;
 	const auto scale = int(ConfigFileManager::getInstance().getOptionGuiScale());
 
 	const int snap_distance_x = std::min(m_bounds.getWidth() * scale / 2 - 3, SNAP_DISTANCE);

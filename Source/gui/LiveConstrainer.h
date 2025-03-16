@@ -22,8 +22,6 @@ public:
 	bool isConstraining();
 
 protected:
-	static constexpr auto SNAP_DISTANCE = 10;
-
 	void updateComponent();
 	void unregisterCurrentComponent();
 

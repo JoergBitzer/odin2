@@ -24,16 +24,12 @@
 #include "GitCommitId.h"
 #include "gui/UIAssetsIndices.h"
 
-#ifdef ODIN_LINUX
-#endif
 #ifdef ODIN_WIN
 #define M_PI 3.14159265359
 #pragma warning(disable : 4244) //disable conversion warnings
 #pragma warning(disable : 4100) //disable unreferenced parameter warning (VS really misses the point here...)
 #pragma warning(disable : 4305) //disable double to float truncation warning
 #pragma warning(disable : 4267) //disable size_t to int truncation warning
-#endif
-#ifdef ODIN_MAC
 #endif
 
 // shows the spectrum and wave display for wavetable osc 1
@@ -360,6 +356,9 @@ public:
 class Helpers {
 public:
 	static const Font getAldrichFont(float p_size) {
+#ifdef ODIN_MAC
+		p_size *= 0.81f; // for some reason the font is just larget on mac...
+#endif
 		static auto typeface_aldrich = Typeface::createSystemTypefaceFor(BinaryData::aldrich_regular_ttf, BinaryData::aldrich_regular_ttfSize);
 		return Font(typeface_aldrich).withHeight(p_size);
 	}

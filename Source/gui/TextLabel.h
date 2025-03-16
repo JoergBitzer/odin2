@@ -14,7 +14,7 @@ public:
 		repaint();
 	}
 
-	void paint(juce::Graphics &g) {
+	void paint(juce::Graphics &g) override {
 		const auto disabled_alpha = isEnabled() ? 1.0f : MODULE_DISABLED_ALPHA;
 		g.setColour(juce::Colours::white.withAlpha(0.7f * disabled_alpha));
 		if (m_rotate_90_degrees)

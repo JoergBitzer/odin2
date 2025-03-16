@@ -28,6 +28,8 @@ GlassDropdown::GlassDropdown(Type p_type) : m_type(p_type) {
 	case Type::dropdown_14x4:
 		m_asset = UIAssets::Indices::screen_dropdown_14x4;
 		break;
+	default:
+		break;
 	}
 }
 

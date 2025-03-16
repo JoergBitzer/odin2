@@ -134,7 +134,7 @@ public:
 		m_WT_container = p_WT_container;
 	}
 
-	void resized();
+	void resized() override;
 
 protected:
 	void enableChipArpComponents();
