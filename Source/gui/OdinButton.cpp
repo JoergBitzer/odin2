@@ -23,25 +23,30 @@ OdinAudioProcessor *OdinButton::m_processor;
 void OdinButton::paintButton(juce::Graphics &g, bool p_highlight, bool p_pressed) {
 
 	if (m_type == Type::unassigned) {
+		// this is still used on the Spline ad component
 
-		static constexpr auto stroke = 1.0f;
+		static constexpr auto stroke = 1.5f;
 
-		g.setColour(COL_LIGHT);
-		g.drawRoundedRectangle(getLocalBounds().toFloat().reduced(stroke / 2.0f), 4.0f, stroke);
+		const juce::Colour spline_accent_colour    = juce::Colour(0xfff2960b);
+		const juce::Colour spline_highlight_colour = juce::Colour(0xffD4C350);
 
-		if (p_highlight) {
-			g.setColour(COL_LIGHT.withAlpha(0.3f));
-			g.fillRoundedRectangle(getLocalBounds().toFloat().reduced(stroke / 2.0f), 4.0f);
-		} else if (getToggleState()) {
-			g.setColour(COL_LIGHT.withAlpha(0.15f));
-			g.fillRoundedRectangle(getLocalBounds().toFloat().reduced(stroke / 2.0f), 4.0f);
+        const auto corner = 4.0f;
+
+		g.setColour(juce::Colours::black.withAlpha(0.2f));
+		g.fillRoundedRectangle(getLocalBounds().toFloat().reduced(stroke / 2.0f), corner);
+
+		g.setColour(p_highlight ? spline_highlight_colour : spline_accent_colour);
+		g.drawRoundedRectangle(getLocalBounds().toFloat().reduced(stroke / 2.0f), corner, stroke);
+
+		if (getToggleState() && !p_highlight) {
+			g.setColour(spline_accent_colour.withAlpha(0.15f));
+			g.fillRoundedRectangle(getLocalBounds().toFloat().reduced(stroke / 2.0f), corner);
 		}
 
-		g.setColour(COL_LIGHT);
-		g.setFont(Helpers::getAldrichFont(H * 0.6f));
+		g.setColour(p_highlight ? spline_highlight_colour : spline_accent_colour);
+		g.setFont(juce::Font(H * 0.6f, 1));
 		g.drawText(m_button_text, getLocalBounds(), juce::Justification::centred, false);
 
-		jassertfalse;
 		return;
 	}
 

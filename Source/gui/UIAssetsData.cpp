@@ -3,7 +3,7 @@
 
 #include "UIAssetsData.h"
 
-std::array<const char*, 1247> UIAssetsData::Data = {
+std::array<const char*, 1248> UIAssetsData::Data = {
     BinaryData::knob_4x4_a_0000_png,
     BinaryData::knob_4x4_a_0001_png,
     BinaryData::knob_4x4_a_0002_png,
@@ -1251,4 +1251,5 @@ std::array<const char*, 1247> UIAssetsData::Data = {
     BinaryData::screen_up_down_8x4_L_png,
     BinaryData::screen_up_down_8x4_R_png,
     BinaryData::slider_png,
+    BinaryData::spline_ad_png,
 };

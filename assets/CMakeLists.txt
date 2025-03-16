@@ -266,6 +266,7 @@ SOURCES
     "Soundbanks/Factory Presets/Stabs/Saw Pluck [Projektor].odin"
     "init_patch.odin"
     "font/aldrich_regular.ttf"
+    "spline_ad.png"
 
     "./graphics/animations/knob_4x4_a_0000.png"
     "./graphics/animations/knob_4x4_a_0001.png"
@@ -1514,4 +1515,5 @@ SOURCES
     "./graphics/screen_up_down_8x4_L.png"
     "./graphics/screen_up_down_8x4_R.png"
     "./graphics/slider.png"
+    "./spline_ad.png"
 )

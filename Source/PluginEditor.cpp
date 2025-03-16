@@ -757,7 +757,7 @@ OdinEditor::OdinEditor(OdinAudioProcessor &p_processor, AudioProcessorValueTreeS
 	bool show_spline_ad = ConfigFileManager::getInstance().getNumGuiOpens() > NUM_SP_AD1 && !ConfigFileManager::getInstance().getOptionSplineAd1Seen();
 	show_spline_ad |= ConfigFileManager::getInstance().getNumGuiOpens() > NUM_SP_AD2 && !ConfigFileManager::getInstance().getOptionSplineAd2Seen();
 	m_spline_ad.setVisible(show_spline_ad);
-
+	
 	UIAssetManager::getInstance()->registerEditor(this);
 
 	// start resizing thread

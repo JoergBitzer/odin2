@@ -1253,6 +1253,7 @@ enum class Indices : int {
     screen_up_down_8x4_L,
     screen_up_down_8x4_R,
     slider,
+    spline_ad,
     NumIndices
 };
 }

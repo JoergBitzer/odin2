@@ -6,5 +6,5 @@
 #include "../GlobalIncludes.h"
 
 struct UIAssetsData {
-    static std::array<const char*, 1247> Data;
+    static std::array<const char*, 1248> Data;
 };

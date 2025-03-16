@@ -3,7 +3,7 @@
 
 #include "UIAssetsSize.h"
 
-std::array<size_t, 1247> UIAssetsSize::Size = {
+std::array<size_t, 1248> UIAssetsSize::Size = {
     BinaryData::knob_4x4_a_0000_pngSize,
     BinaryData::knob_4x4_a_0001_pngSize,
     BinaryData::knob_4x4_a_0002_pngSize,
@@ -1251,4 +1251,5 @@ std::array<size_t, 1247> UIAssetsSize::Size = {
     BinaryData::screen_up_down_8x4_L_pngSize,
     BinaryData::screen_up_down_8x4_R_pngSize,
     BinaryData::slider_pngSize,
+    BinaryData::spline_ad_pngSize,
 };
