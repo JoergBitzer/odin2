@@ -26,7 +26,7 @@ endif()
 file(MAKE_DIRECTORY "${CMAKE_BINARY_DIR}/include")
 file(WRITE "${CMAKE_BINARY_DIR}/include/GitCommitId.h" "#define GIT_COMMIT_ID \"${GIT_HASH}\"")
 
-option(ODIN2_COPY_PLUGIN_AFTER_BUILD "Copy JUCE Plugins after built" OFF)
+option(ODIN2_COPY_PLUGIN_AFTER_BUILD "Copy JUCE Plugins after built" ON)
 
 add_compile_definitions(
   JUCE_MODAL_LOOPS_PERMITTED
@@ -54,7 +54,6 @@ juce_add_plugin(Odin2
   COPY_PLUGIN_AFTER_BUILD ${ODIN2_COPY_PLUGIN_AFTER_BUILD}
   LV2_URI https://thewavewarden.com/odin2
   LV2_SHARED_LIBRARY_NAME Odin2
-  COPY_PLUGIN_AFTER_BUILD TRUE
 )
 
 # ==================== CLAP =======================
