@@ -1,6 +1,6 @@
 [Setup]
 AppName=Odin2 Synthesizer Plugin
-AppVersion=2.4.0
+AppVersion=2.4.1
 DefaultDirName={cf}
 DefaultGroupName=Odin2
 OutputBaseFilename=Odin2

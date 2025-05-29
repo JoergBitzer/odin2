@@ -1,3 +1,5 @@
+# 2.4.1
+- Downgrade Ubuntu runner again to downgrade GLIBC version
 # 2.4.0
 - complete overhaul the synth UI
 - GUI scaling options now 100%, 125%, 150%, 175%, 200%,
