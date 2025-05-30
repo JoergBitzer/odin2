@@ -1,7 +1,7 @@
 # ================== General Info ======================
 cmake_minimum_required(VERSION 3.15)
 set(CMAKE_OSX_DEPLOYMENT_TARGET 10.11 CACHE STRING "Minimum macOS version")
-project(Odin2 VERSION 2.4.0 LANGUAGES C CXX ASM)
+project(Odin2 VERSION 2.4.1 LANGUAGES C CXX ASM)
 
 # ================== CMake Subdirs ======================
 add_subdirectory(libs/clap-juce-extensions EXCLUDE_FROM_ALL)
@@ -42,7 +42,7 @@ if(UNIX AND NOT APPLE)
 endif()
 
 juce_add_plugin(Odin2
-  VERSION "2.4.0"
+  VERSION "2.4.1"
   COMPANY_NAME "TheWaveWarden"
   COMPANY_WEBSITE "www.thewavewarden.com"
   COMPANY_EMAIL "info@thewavewarden.com"

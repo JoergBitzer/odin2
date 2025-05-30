@@ -18,7 +18,7 @@ sudo cp -r $DIR/Odin2.vst3 /usr/lib/vst3
 echo "Copy Odin2 to LV2 directory"
 sudo cp -r $DIR/Odin2.lv2 /usr/lib/lv2
 
-echo "Copy Odin2 to LV2 directory"
+echo "Copy Odin2 to CLAP directory"
 sudo cp -r $DIR/Odin2.clap /usr/lib/clap
 
 if [ ! -d "$HOME/.local/share/odin2/Soundbanks" ]; then

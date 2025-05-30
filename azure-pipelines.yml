@@ -16,7 +16,7 @@ jobs:
         imageName: 'macOS-latest'
         isMac: True
       Linux:
-        imageName: 'ubuntu-latest'
+        imageName: 'ubuntu-22.04'
         isLinux: True
 
   pool:
